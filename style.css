@@ -1,0 +1,163 @@
+/* ===========================
+   FONTE HK MODULAR
+   =========================== */
+
+@font-face {
+  font-family: 'HK Modular';
+  src: url('fonts/HKModular.woff2') format('woff2'),
+       url('fonts/HKModular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body { font-family: 'HK Modular', Arial, sans-serif; }
+
+
+/* ===========================
+   RESET
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   FUNDO ANIMADO NEON
+   =========================== */
+
+body {
+    font-family: 'HK Modular', Arial, sans-serif;
+    background: linear-gradient(120deg, #ff00ff, #00eaff, #00ff6a, #fffb00, #ff0077);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: #ffffff;
+    padding: 20px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===========================
+   TÍTULO PRINCIPAL
+   =========================== */
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.8rem;
+    text-shadow: 0 0 18px #ff00ff, 0 0 30px #ff00ff;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   PARÁGRAFO INTRODUTÓRIO
+   =========================== */
+
+p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ffeefc;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   LISTA DAS LINGUAGENS
+   =========================== */
+
+ul {
+    list-style: none;
+    margin: auto;
+    max-width: 350px;
+}
+
+li {
+    background: #ffffff22;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin: 12px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.25s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 0 12px #ffffff33;
+}
+
+/* Efeito neon explosão */
+li:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: #fff;
+    box-shadow: 
+        0 0 12px #ff00ea,
+        0 0 20px #00eaff,
+        0 0 28px #fffb00,
+        0 0 40px #00ff6a;
+}
+
+/* ===========================
+   CARDS FUTURISTAS NEON
+   =========================== */
+
+.card {
+    background: #ffffff15;
+    border: 2px solid #ffffff55;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 800px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 25px #ffffff33;
+    transition: 0.3s ease;
+}
+
+/* Hover neon explosivo */
+.card:hover {
+    border-color: #fff;
+    box-shadow:
+        0 0 20px #ff00ff,
+        0 0 35px #00eaff,
+        0 0 50px #fffb00,
+        0 0 60px #00ff6a;
+    transform: translateY(-6px);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #00f7ff;
+    text-shadow: 0 0 14px #00f7ff;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #f9f9f9;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 18px;
+        margin: 25px;
+    }
+
+    li {
+        font-size: 1.05rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
